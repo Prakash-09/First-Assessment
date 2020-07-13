@@ -1,0 +1,24 @@
+.header-row{
+    background-color: rgb(3, 2, 61);
+    color:white;
+    padding:10px 0px 5px 15px;
+    position:sticky;
+    top:0%;
+    width:100%;
+    z-index:99;
+}
+.main-title{
+    padding-left: 10px;
+}
+.alignLeftIcon{
+    padding: 0px 30px;
+}
+.infoCircleIcon{
+    padding:10px
+}
+.bellIcon{
+    padding:0px 20px 0px 0px;
+}
+.userIcon{
+    padding:0px 0px 0px 0px;
+}
