@@ -22,16 +22,16 @@ class Home extends Component {
                 <div className="col-md-6 col-sm-6 container" >
                     <div className="row ">
                         <div className="col-md col-sm cards shadow">
-                            <div className="row container">
-                                <div className="col-md-12 small-card-title">
-                                    <h6>Digital Solution</h6>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <h6 className="small-card-title">Digital Solution</h6>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-6 discription">
                                     <p>Accesslerated Assembly, Any-to-Any Integrations</p>
                                 </div>
-                                <div className="col-md-6 small-card-images text-center">
+                                <div className="col-md-6 small-card-images text-right">
                                     <img src="/images/digital-solutions.svg" height="50px" width="50px" alt="Digital Solution" />
                                 </div>
                             </div>
@@ -42,16 +42,16 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className="col-md col-sm cards shadow">
-                            <div className="row container">
-                                <div className="col-md-12 small-card-title">
-                                    <h6>Model Management</h6>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <h6 className="small-card-title">Model Management</h6>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-6 discription">
                                     <p>Model Catalogue &Deployment,Monitoring & Govarnance</p>
                                 </div>
-                                <div className="col-md-6 col-sm-6 small-card-images text-center">
+                                <div className="col-md-6 col-sm-6 small-card-images text-right">
                                     <img src="/images/model-management.png" height="50px" width="50px" alt="model-management-image" />
                                 </div>
                             </div>
@@ -64,16 +64,16 @@ class Home extends Component {
                     </div>
                     <div className="row ">
                         <div className="col-md col-sm cards shadow">
-                            <div className="row container">
-                                <div className="col-md-12 small-card-title">
-                                    <h6>Cognitive Fusion</h6>
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <h6 className="small-card-title">Cognitive Fusion</h6>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-6 discription">
                                     <p>Scalable Data Pipeline, Artificial intilligence</p>
                                 </div>
-                                <div className="col-md-6 small-card-images text-center">
+                                <div className="col-md-6 small-card-images text-right">
                                     <img src="/images/cognitive-fusion.svg" height="50px" width="50px" alt="cognitive-fusion-image" />
                                 </div>
                             </div>
@@ -84,16 +84,16 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className="col-md col-sm cards shadow">
-                            <div className="row container">
-                                <div className="col-md-12 small-card-title"> 
-                                    <h6>Sensor Fabric</h6>
+                            <div className="row">
+                                <div className="col-md-12"> 
+                                    <h6 className="small-card-title">Sensor Fabric</h6>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-6 discription">
                                     <p>Edge Orchestration and automation</p>
                                 </div>
-                                <div className="col-md-6 small-card-images text-center">
+                                <div className="col-md-6 small-card-images text-right">
                                     <img src="/images/sensor-fabric.svg" height="50px" width="50px" alt="sensor-fabric-image" />
                                 </div>
                             </div>

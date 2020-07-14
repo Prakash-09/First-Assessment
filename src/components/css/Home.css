@@ -20,6 +20,10 @@
 .small-card-title{
     color:grey;
     padding:1em 0em 0em 0em;
+    white-space: nowrap;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .digital-solution-know-more{
     color: #1A73E8;
