@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUserCog, faTasks, faAtom, faCloudMeatball, faDatabase, faChartLine, faFileCode, faShoppingCart, faLock, faUsers, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import Home from './Home.js';
+import Dashboard from './Dashboard';
 
 class DdAssessment extends Component {
     render() {
@@ -20,7 +21,7 @@ class DdAssessment extends Component {
                                         <label className="nav-header">Digital Studio</label>
                                         <div className="lists ">
                                             <Link to="/Home"><li className="list-items"><FontAwesomeIcon icon={faHome} className="sideNav-1Icon" />Home</li></Link>
-                                            <li className="list-items"><a ><FontAwesomeIcon icon={faUserCog} className="sideNav-2Icon" />Dashboard</a></li>
+                                            <Link to="/Dashboard"><li className="list-items"><FontAwesomeIcon icon={faUserCog} className="sideNav-2Icon" />Dashboard</li></Link>
                                             <li className="list-items"><a ><FontAwesomeIcon icon={faTasks} className="sideNav-3Icon" />User Tasks</a></li>
                                             <li className="list-items"><a ><FontAwesomeIcon icon={faAtom} className="sideNav-4Icon" />Solutions</a></li>
                                             <li className="list-items"><a ><FontAwesomeIcon icon={faCloudMeatball} className="sideNav-5Icon" />Environments</a></li>
@@ -36,6 +37,7 @@ class DdAssessment extends Component {
                                 </div>
                                 <div className="col-md-10 col-sm-10 content">
                                     <Route path="/Home" component={Home} />
+                                    <Route path="/Dashboard" component={Dashboard} />
                                 </div>
                             </div>
                         </Router>

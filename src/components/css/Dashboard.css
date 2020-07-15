@@ -1,0 +1,126 @@
+.main-card{
+    border-radius: 5px;
+    height:550px;
+}
+.dashBoard{
+    position:relative;
+}
+#leftSidePannel{
+    border:1px solid grey;
+    position: absolute;
+    /* left:-350px; */
+    display: none;
+    border-bottom-right-radius: 5px;
+    height: 550px;
+    margin:0px 0px 0px 0px;
+}
+#leftSidePannel.active{
+    /* left: 15px; */
+    display: block;
+    width: 10%;
+    z-index:100;
+    background-color: white;
+}
+.leftSide-lists{
+    list-style-type: none;
+    padding:15px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:100px;
+    margin:0px 0px 0px -30px;
+}
+#leftPannelButton{
+    margin: 220px 0px 0px -72px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    border: 1px solid rgb(228, 225, 225);
+    left: 0;
+	
+    width: 170px;
+    background-color: rgb(231, 231, 231);
+    z-index: 1;
+    
+    vertical-align:top;
+    transform:rotate(7deg);
+    -ms-transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+    -webkit-transform:rotate(270deg);
+    -o-transform:rotate(270deg);
+    cursor: pointer;
+}
+#leftPannelButton.active{
+    left: 10%;
+}
+.showPalatteLeftIcon{
+    color:rgb(3, 168, 168);
+    margin: 5px 0px 0px 10px;
+}
+.showPalatteRightIcon{
+    color: rgb(3, 168, 168);
+    margin: 5px 0px 0px 10px;;
+}
+#rightSidePannel{
+    border:1px solid grey;
+    position: absolute;
+    /* left:-350px; */
+    display: none;
+    right:0%;
+    border-bottom-left-radius: 5px;
+    height: 550px;
+    margin:0px 0px 0px 0px;
+}
+#rightSidePannel.active{
+    /* left: 15px; */
+    display: block;
+    width: 13%;
+    z-index:99;
+    background-color: white;
+}
+.rightSide-lists{
+    padding:10px 5px 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:90px;
+}
+#rightPanelButton{
+    margin: 220px -72px 0px 0px; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+    border: 1px solid rgb(228, 225, 225);
+    position: absolute;
+    right: 0;
+	
+    width: 170px;
+    background-color: rgb(231, 231, 231);
+    z-index: 1;
+    
+    vertical-align:top;
+    transform:rotate(7deg);
+    -ms-transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+    -webkit-transform:rotate(270deg);
+    -o-transform:rotate(270deg);
+    cursor:pointer;
+}
+#rightPanelButton.active{
+    right:13%;
+}
+.showPropertiesRightIcon{
+    color:rgb(3, 168, 168);
+    margin:5px 0px 0px 5px;
+}
+.showPropertiesLeftIcon{
+    color: rgb(3, 168, 168);
+    margin:5px 0px 0px 5px;
+}
+.dashboard-content{
+    width:100% !important;
+    margin: 20px 40px 0px 20px;
+    z-index:0;
+}

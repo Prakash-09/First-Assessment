@@ -1,11 +1,12 @@
 .header-row{
+    margin: 0;
     background-color: rgb(3, 2, 61);
     color:white;
     padding:10px 0px 5px 15px;
     position:sticky;
     top:0%;
     width:100%;
-    z-index:99;
+    z-index:999;
 }
 .main-title{
     padding-left: 10px;
