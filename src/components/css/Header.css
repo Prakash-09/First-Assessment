@@ -23,3 +23,16 @@
 .userIcon{
     padding:0px 0px 0px 0px;
 }
+@media(max-width:768px){
+    .alignLeftIcon{display: none;}
+    .infoCircleIcon{display: none;}
+    .searchIcon{display: none;}
+    .bellIcon{display: none;}
+    .userIcon{display: none;}
+    .faEllipsisV{display: block;}
+    .faBars{display: block;}
+}
+@media(min-width:768px){
+    .faBars{display: none;}
+    .faEllipsisV{display: none;}
+}

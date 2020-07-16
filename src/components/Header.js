@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './css/Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAlignLeft, faInfoCircle, faSearch, faBell, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faEllipsisV, faAlignLeft, faInfoCircle, faSearch, faBell, faUser } from '@fortawesome/free-solid-svg-icons'
 
 class Header extends Component{
     render(){
@@ -13,11 +13,13 @@ class Header extends Component{
                     <i className="alignLeftIcon"><FontAwesomeIcon icon={faAlignLeft} /></i>
                     <i className="infoCircleIcon"><FontAwesomeIcon icon={faInfoCircle} /></i>
                     <i className="searchIcon"><FontAwesomeIcon icon={faSearch} /></i>
+                    <i className="faBars"><FontAwesomeIcon icon={faBars} /></i>
                </div>
                <div className="col-md-7 col-sm-7"></div>
                <div className="col-md-1 col-sm-1">
                     <i className="bellIcon"><FontAwesomeIcon icon={faBell} /></i>
                     <i className="userIcon"><FontAwesomeIcon icon={faUser} /></i>
+                    <i className="faEllipsisV text-right"><FontAwesomeIcon icon={faEllipsisV} /></i>
                 </div>
             </div>
         );

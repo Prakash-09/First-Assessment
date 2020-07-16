@@ -22,16 +22,16 @@ class DdAssessment extends Component {
                                         <div className="lists ">
                                             <Link to="/Home"><li className="list-items"><FontAwesomeIcon icon={faHome} className="sideNav-1Icon" />Home</li></Link>
                                             <Link to="/Dashboard"><li className="list-items"><FontAwesomeIcon icon={faUserCog} className="sideNav-2Icon" />Dashboard</li></Link>
-                                            <li className="list-items"><a ><FontAwesomeIcon icon={faTasks} className="sideNav-3Icon" />User Tasks</a></li>
-                                            <li className="list-items"><a ><FontAwesomeIcon icon={faAtom} className="sideNav-4Icon" />Solutions</a></li>
-                                            <li className="list-items"><a ><FontAwesomeIcon icon={faCloudMeatball} className="sideNav-5Icon" />Environments</a></li>
-                                            <li className="list-items"><a ><FontAwesomeIcon icon={faDatabase} className="sideNav-6Icon" />Data Stores</a></li>
-                                            <li className="list-items"><a ><FontAwesomeIcon icon={faChartLine} className="sideNav-7Icon" />Reports</a></li>
-                                            <li className="list-items"><a ><FontAwesomeIcon icon={faFileCode} className="sideNav-8Icon" />Templates</a></li>
-                                            <li className="list-items"><a ><FontAwesomeIcon icon={faShoppingCart} className="sideNav-9Icon" />Assest</a></li>
-                                            <li className="list-items"><a ><FontAwesomeIcon icon={faLock} className="sideNav-10Icon" />Store</a></li>
-                                            <li className="list-items"><a ><FontAwesomeIcon icon={faUsers} className="sideNav-11Icon" />User Management</a></li>
-                                            <li className="list-items"><a ><FontAwesomeIcon icon={faSignOutAlt} className="sideNav-12Icon" />Sign out</a></li>
+                                            <Link to="/"><li className="list-items"><FontAwesomeIcon icon={faTasks} className="sideNav-3Icon" />User Tasks</li></Link>
+                                            <Link to="/"><li className="list-items"><FontAwesomeIcon icon={faAtom} className="sideNav-4Icon" />Solutions</li></Link>
+                                            <Link to="/"><li className="list-items"><FontAwesomeIcon icon={faCloudMeatball} className="sideNav-5Icon" />Environments</li></Link>
+                                            <Link to="/"><li className="list-items"><FontAwesomeIcon icon={faDatabase} className="sideNav-6Icon" />Data Stores</li></Link>
+                                            <Link to="/"><li className="list-items"><FontAwesomeIcon icon={faChartLine} className="sideNav-7Icon" />Reports</li></Link>
+                                            <Link to="/"><li className="list-items"><FontAwesomeIcon icon={faFileCode} className="sideNav-8Icon" />Templates</li></Link>
+                                            <Link to="/"><li className="list-items"><FontAwesomeIcon icon={faShoppingCart} className="sideNav-9Icon" />Assest</li></Link>
+                                            <Link to="/"><li className="list-items"><FontAwesomeIcon icon={faLock} className="sideNav-10Icon" />Store</li></Link>
+                                            <Link to="/"><li className="list-items"><FontAwesomeIcon icon={faUsers} className="sideNav-11Icon" />User Management</li></Link>
+                                            <Link to="/"><li className="list-items"><FontAwesomeIcon icon={faSignOutAlt} className="sideNav-12Icon" />Sign out</li></Link>  
                                         </div>
                                     </div>
                                 </div>

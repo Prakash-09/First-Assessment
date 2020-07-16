@@ -37,7 +37,7 @@ class Home extends Component {
                             </div>
                             <div className="row container">
                                 <div className="col-md-12 knowMore">
-                                    <a href="#" className="digital-solution-know-more">Know More {'>>'}</a>
+                                    <p className="digital-solution-know-more">Know More {'>>'}</p>
                                 </div>
                             </div>
                         </div>
@@ -52,12 +52,12 @@ class Home extends Component {
                                     <p>Model Catalogue &Deployment,Monitoring & Govarnance</p>
                                 </div>
                                 <div className="col-md-6 col-sm-6 small-card-images text-right">
-                                    <img src="/images/model-management.png" height="50px" width="50px" alt="model-management-image" />
+                                    <img src="/images/model-management.png" height="50px" width="50px" alt="model-management-pic" />
                                 </div>
                             </div>
                             <div className="row container">
                                 <div className="col-md-12 knowMore">
-                                    <a href="#" className="model-management-know-more">Know More {'>>'}</a>
+                                    <p className="model-management-know-more">Know More {'>>'}</p>
                                 </div>
                             </div>
                         </div>
@@ -74,12 +74,12 @@ class Home extends Component {
                                     <p>Scalable Data Pipeline, Artificial intilligence</p>
                                 </div>
                                 <div className="col-md-6 small-card-images text-right">
-                                    <img src="/images/cognitive-fusion.svg" height="50px" width="50px" alt="cognitive-fusion-image" />
+                                    <img src="/images/cognitive-fusion.svg" height="50px" width="50px" alt="cognitive-fusion-pic" />
                                 </div>
                             </div>
                             <div className="row container">
                                 <div className="col-md-12 knowMore">
-                                    <a href="#" className="cognitive-fusion-know-more">Know More {'>>'}</a>
+                                    <p className="cognitive-fusion-know-more">Know More {'>>'}</p>
                                 </div>
                             </div>
                         </div>
@@ -94,12 +94,12 @@ class Home extends Component {
                                     <p>Edge Orchestration and automation</p>
                                 </div>
                                 <div className="col-md-6 small-card-images text-right">
-                                    <img src="/images/sensor-fabric.svg" height="50px" width="50px" alt="sensor-fabric-image" />
+                                    <img src="/images/sensor-fabric.svg" height="50px" width="50px" alt="sensor-fabric-pic" />
                                 </div>
                             </div>
                             <div className="row container">
                                 <div className="col-md-12 knowMore">
-                                    <a href="#" className="sensor-fabric-know-more">Know More {'>>'}</a>
+                                    <p className="sensor-fabric-know-more">Know More {'>>'}</p>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@ class Home extends Component {
                             <div className="row">
                                 <div className="col-md col-sm cards shadow">
                                     <div className="last-image">
-                                        <img src="/images/design.svg" height="25px" width="25px" alt="design-image" />
+                                        <img src="/images/design.svg" height="25px" width="25px" alt="design-pic" />
                                     </div>
                                     <small className="last-title">Design</small>
                                     <p className="last-discriptions">Get started width our visual IDE for designing the
@@ -120,7 +120,7 @@ class Home extends Component {
                                 </div>
                                 <div className="col-md col-sm cards shadow">
                                     <div className="last-image">
-                                        <img src="/images/deploy.svg" height="25px" width="25px" alt="deploy-image" />
+                                        <img src="/images/deploy.svg" height="25px" width="25px" alt="deploy-pic" />
                                     </div>
                                     <small className="last-title">Deploy</small>
                                     <p className="last-discriptions">Deploy your Apps with one click to the Environment
@@ -131,7 +131,7 @@ class Home extends Component {
                                 </div>
                                 <div className="col-md col-sm cards shadow">
                                     <div className="last-image">
-                                        <img src="/images/run.svg" height="25px" width="25px" alt="run-image" />
+                                        <img src="/images/run.svg" height="25px" width="25px" alt="run-pic" />
                                     </div>
                                     <small className="last-title">Run</small>
                                     <p className="last-discriptions">Run and Monitor APIs of your Solutions from your Enterprise
