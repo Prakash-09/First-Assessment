@@ -1,0 +1,146 @@
+.box-heading{
+    width: 15%;
+    color: white;
+    margin-bottom: -15px;
+    margin-left: 22px;
+    opacity: 99;
+    background-color: black;
+}
+.box-container{
+    opacity: 1;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image:   
+        linear-gradient( black, black),
+        linear-gradient( black, black),
+        linear-gradient( black, black),
+        linear-gradient( black, black);
+    background-size:    100% 5px, 5px 100%, 100% 5px, 5px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: bg 1s cubic-bezier(0.19, 1, 0.22, 1) 1;
+    /* animation-play-state: running; */
+}
+@keyframes bg {
+    0% {
+        background-size:    0 5px, 5px 0, 0 5px, 5px 0;
+    }
+    25% {
+        background-size:    100% 5px, 5px 0, 0 5px, 5px 0;
+    }
+    50% {
+        background-size:    100% 5px, 5px 100%, 0 5px, 5px 0;
+    }
+    75% {
+        background-size:    100% 5px, 5px 100%, 100% 5px, 5px 0;
+    }
+    100% {
+        background-size:    100% 5px, 5px 100%, 100% 5px, 5px 100%;
+    }
+}
+
+.home-card-container{
+    background-color: rgb(170, 245, 255);
+    transition: 2s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.home-card-footer{
+    background-color: transparent !important;
+    border: none !important;
+}
+.home-card-container:before {
+    content: "__";
+    font-weight: 900;
+    color: black;
+    position: absolute;
+    opacity: 0;  
+    bottom: 12px;
+    right: 20px;
+    transition: 1s;
+}
+.home-card-container:hover:before {
+    opacity: 1;
+    right: 6px;
+}
+.home-card-container:after {
+    content: "__";
+    font-weight: 900;
+    color: black;
+    position: absolute;
+    opacity: 1;  
+    bottom: 12px;
+    right: 12px;
+    transition: 0.4s;
+}
+.home-card-container:hover:after {
+    opacity: 0;
+    right: 6px;
+}
+.first-box-container{
+    background-color: lightgrey;
+    height: 55px;
+    /* transition: height 1s;
+    -webkit-transition: height 1s; */
+    overflow: hidden;
+}
+.first-box-container:hover{
+    height: 200px;
+    transition: 1s;
+}
+/* .collapse-first-box-container{
+    background-color: lightgrey;
+    height: 55px;
+    overflow: hidden;
+    transition: 1s;
+} */
+.second-box-container{
+    background-color: lightgrey;
+    height: 55px;
+    overflow: hidden;
+}
+.second-box-container:hover{
+    height: 200px;
+    transition: 1s;
+}
+/* .expand-second-box-container{
+    background-color: lightgrey;
+    height: 200px;
+    transition: 1s;
+} */
+.third-box-container{
+    background-color: lightgrey;
+    height: 55px;
+    overflow: hidden;
+}
+.third-box-container:hover{
+    height: 200px;
+    transition: 1s;
+}
+/* .expand-third-box-container{
+    background-color: lightgrey;
+    height: 200px;
+    transition: 1s;
+} */
+.fourth-box-container{
+    background-color: lightgrey;
+    height: 55px;
+    overflow: hidden;
+}
+.fourth-box-container:hover{
+    height: 200px;
+    transition: 1s;
+}
+/* .expand-fourth-box-container{
+    background-color: lightgrey;
+    height: 200px;
+    transition: 1s;
+} */
+
+.partners-container{
+    background-color: purple;
+    color: white;
+}
