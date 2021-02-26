@@ -6,6 +6,9 @@
 .add-page-input{
     width: 100%;
 }
+.add-icon-input{
+    width: 100%;
+}
 .close-add-input{
     position: absolute;
     right: 10px;
