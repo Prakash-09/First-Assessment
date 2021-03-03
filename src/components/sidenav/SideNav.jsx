@@ -66,7 +66,7 @@ export default class SideNav extends React.Component {
     }
     render() {
         const { activeNavItem, showAddPageInputBox, pageName, iconName } = this.state;
-        console.log("navData", this.state.navData)
+        // console.log("navData", this.state.navData)
 
         return (
             <div>

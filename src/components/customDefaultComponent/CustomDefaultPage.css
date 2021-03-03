@@ -1,0 +1,16 @@
+.section-plus-icon{
+    cursor: pointer;
+}
+.custom-card{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    cursor: pointer;
+    overflow: hidden;
+}
+.img-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

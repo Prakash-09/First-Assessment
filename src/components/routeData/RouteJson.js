@@ -1,8 +1,9 @@
 import Home from '../home/Home';
 import Dashboard from '../dashboard/Dashboard';
-import UserTasks from '../usertasks/UserTasks';
+// import UserTasks from '../usertasks/UserTasks';
+import customDefaultComponent from '../customDefaultComponent/CustomDefaultPage';
 import Solutions from '../solutions/Solutions';
-import Environments from '../environments/Environments';
+// import Environments from '../environments/Environments';
 
 
 export default [
@@ -30,7 +31,7 @@ export default [
         to: "/Usertasks",
         exact: true,
         label: "User Tasks",
-        component: UserTasks,
+        component: customDefaultComponent,
         icon: "fa fa-tasks",
         subMenu: true,
         children: []
@@ -50,7 +51,7 @@ export default [
         to: "/Environments",
         exact: true,
         label: "Environments",
-        component: Environments,
+        component: customDefaultComponent,
         icon: "fa fa-cloud-meatball",
         subMenu: true,
         children: []

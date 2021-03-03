@@ -145,7 +145,7 @@ export default class Environments extends React.Component {
     render() {
         const { loading, level, concepts, showConceptModal, conceptsConfig, threeSimilarSections, showThreeSimilarSectionsModal, selectedSectionModalHeading, threeSimilarSectionsConfig } = this.state;
         // console.log("threeSimilarSections", threeSimilarSectionsConfig, "similarSections", threeSimilarSections)
-        console.log("concepts", concepts, "threeSimilarSections", threeSimilarSections)
+        // console.log("concepts", concepts, "threeSimilarSections", threeSimilarSections)
         return (
             <div className="environments-container">
                 {loading &&

@@ -41,6 +41,7 @@ export default class App extends Component {
         />
       )
     })
+
     const subMenu = routeJson.map(route => 
       (route.subMenu && route.children) && 
       route.children.map((subRoute, subRouteIdx) => {
@@ -55,6 +56,7 @@ export default class App extends Component {
         )
       })
     )
+    
     return (
       <div className="App">
         <Row>
