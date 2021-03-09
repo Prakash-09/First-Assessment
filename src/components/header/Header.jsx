@@ -9,7 +9,7 @@ class Header extends Component{
             <div className="row header-row">
                <div className="col-md-4 col-sm-4">
                    <img src="/images/digitaldots.png" height="28px" width="28px" alt="DigitalDots Logo" className="DigitalDots-Logo" />
-                    <label className="main-title">DigitalDots</label>
+                    <label className="main-title">XCalliber</label>
                     <i className="alignLeftIcon"><FontAwesomeIcon icon={faAlignLeft} /></i>
                     <i className="infoCircleIcon"><FontAwesomeIcon icon={faInfoCircle} /></i>
                     <i className="searchIcon"><FontAwesomeIcon icon={faSearch} /></i>

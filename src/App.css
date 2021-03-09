@@ -16,7 +16,7 @@
     overflow: auto;
     /* position: fixed; */
 }
-.components-content{
+ .components-content{
     height: 100vh;
     overflow: auto;
     z-index: 1;
@@ -27,6 +27,7 @@
     width: 13%;
     transition: 0.3s ;
 }
+/*
 .card-container{
     background-color: rgb(170, 245, 255);
     transition: 2s;
@@ -68,4 +69,4 @@
 .card-container:hover:after {
     opacity: 0;
     right: 6px;
-}
+} */

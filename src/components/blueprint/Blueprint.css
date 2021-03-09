@@ -1,7 +1,7 @@
 .box-heading{
     width: 15%;
     color: white;
-    margin-bottom: -15px;
+    margin-bottom: -20px;
     margin-left: 22px;
     opacity: 99;
     background-color: black;
@@ -9,6 +9,7 @@
 .box-container{
     opacity: 1;
     width: 100%;
+    min-height: 300px;
     background-repeat: no-repeat;
     background-image:   
         linear-gradient( black, black),
@@ -37,8 +38,18 @@
         background-size:    100% 5px, 5px 100%, 100% 5px, 5px 100%;
     }
 }
-
-.home-card-container{
+.add-icon-label:hover{
+    cursor: pointer;
+}
+.full-split-container{
+    /* border: 1px solid black; */
+    border-radius: 3px;
+    box-shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.568);;
+}
+.block-container{
+    background-color: lightgrey;
+}
+.card-container-in-block{
     background-color: rgb(170, 245, 255);
     transition: 2s;
     background-size: cover;
@@ -48,11 +59,11 @@
     cursor: pointer;
     overflow: hidden;
 }
-.home-card-footer{
+.card-footer-in-block{
     background-color: transparent !important;
     border: none !important;
 }
-.home-card-container:before {
+.card-container-in-block:before {
     content: "__";
     font-weight: 900;
     color: black;
@@ -62,11 +73,11 @@
     right: 20px;
     transition: 1s;
 }
-.home-card-container:hover:before {
+.card-container-in-block:hover:before {
     opacity: 1;
     right: 6px;
 }
-.home-card-container:after {
+.card-container-in-block:after {
     content: "__";
     font-weight: 900;
     color: black;
@@ -76,7 +87,7 @@
     right: 12px;
     transition: 0.4s;
 }
-.home-card-container:hover:after {
+.card-container-in-block:hover:after {
     opacity: 0;
     right: 6px;
 }
