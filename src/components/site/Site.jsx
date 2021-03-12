@@ -6,7 +6,7 @@ import './Site.css';
 import siteData from './SiteData';
 import SideNav from '../sidenav/SideNav';
 import Blueprint from '../blueprint/Blueprint';
-
+// import Sections from '../sections/Sections';
 
 export default class Site extends React.Component {
     constructor(props) {
@@ -19,7 +19,6 @@ export default class Site extends React.Component {
             routeData: [],
             selectedSiteCard: {},
             hoverOnSideNav: false,
-            childRoute: [],
         }
     }
 
@@ -41,14 +40,10 @@ export default class Site extends React.Component {
         this.setState({ sites: sites })
     }
     handleExplore(site) {
-        console.log("site", site)
         let routeData = this.state.routeData;
-        // let childRoute = this.state.childRoute;
-        // let fullObjIds = site.full.map(fullObj => {return fullObj.id})
-        // let tested = childRoute?.filter(item =>  fullObjIds.map(objId => objId === item.id.split(" ")[1] ))
-        
-        // console.log("tested", tested)
-        let routeObj = {
+        let routeObj
+
+        routeObj = {
             id: "field " + site.id,
             to: "/" + site.title.replace(/ /g, "") + site.id,
             exact: true,
@@ -58,9 +53,23 @@ export default class Site extends React.Component {
             type: "item",
             children: []
         }
+        if (site.full.length !== 0 || site.split.length !== 0) {
+
+            let childrenArr = site.full.concat(site.split)
+            for (const childrenArrObj of childrenArr) {
+                let routeChildObj = {
+                    id: "field " + childrenArrObj.id,
+                    label: childrenArrObj.title,
+                    icon: "fa fa-folder",
+                    type: "collapse",
+                    children: []
+                }
+                routeObj.children.push(routeChildObj)
+            }
+        }
         routeData = []
         routeData.push(routeObj)
-        this.setState({ selectedSiteCard: site, level: 1, routeData: routeData }) 
+        this.setState({ selectedSiteCard: site, level: 1, routeData: routeData })
     }
     mouseEnter() {
         this.setState({ hoverOnSideNav: true })
@@ -71,27 +80,45 @@ export default class Site extends React.Component {
     levelAsProp(val) {
         this.setState({ level: val, hoverOnSideNav: false })
     }
-    addTopicToSideNav(topic) {
+    addTopicToSideNav(topic, type, topicTwo) {
+        console.log("topic, type, topicTwo", topic, type, topicTwo)
         let routeData = this.state.routeData;
-        let childRoute = this.state.childRoute;
         let selectedSiteCard = this.state.selectedSiteCard;
+        let filteredRoute = routeData.filter(route => route.id.toLowerCase().replace(/ /g, "") === selectedSiteCard.key)[0]
         let routeChildObj = {
             id: "field " + topic.id,
             label: topic.title,
-            icon: "fa fa-arrows-alt",
+            icon: "fa fa-folder",
             type: "collapse",
             children: []
         }
-        let filteredRoute = routeData.filter(route => route.id.toLowerCase().replace(/ /g, "") === selectedSiteCard.key)[0]
-        filteredRoute.children.push(routeChildObj)
-        childRoute.push(routeChildObj)
-        this.setState({ routeData: routeData, childRoute: childRoute })
+        if (type === "full") {
+            filteredRoute.children.push(routeChildObj)
+        } else {
+            if(topicTwo) {
+                let routeChildObjTwo = {
+                    id: "field " + topicTwo.id,
+                    label: topicTwo.title,
+                    icon: "fa fa-folder",
+                    type: "collapse",
+                    children: []
+                }
+                filteredRoute.children.push(routeChildObj, routeChildObjTwo)
+            } else {
+                filteredRoute.children.push(routeChildObj)
+            }
+        }
+        console.log("routeData", routeData)
+        this.setState({ routeData: routeData })
     }
+
     
+    addSubTopicToSideNav(subTopic) {
+        console.log("subTopic", subTopic)
+    }
+
     render() {
         let { loading, level, sites, selectedSiteCard, routeData } = this.state;
-        console.log("routeData", routeData)
-        
         const menu = routeData.map((route, routeIdx) => {
             return (route.component) && (
                 <Route
@@ -99,7 +126,7 @@ export default class Site extends React.Component {
                     path={route.to}
                     exact={route.exact}
                     name={route.label}
-                    render={props => <route.component {...props} addTopicToSideNav={this.addTopicToSideNav.bind(this)} selectedSiteCard={selectedSiteCard} />}
+                    render={props => <route.component {...props} selectedSiteCard={selectedSiteCard} addTopicToSideNav={this.addTopicToSideNav.bind(this)} addSubTopicToSideNav={this.addSubTopicToSideNav.bind(this)} />}
                 />
             )
         })

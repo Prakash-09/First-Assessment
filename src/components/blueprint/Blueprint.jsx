@@ -12,11 +12,11 @@ class Home extends Component {
         this.state = {
             siteCardData: this.props.selectedSiteCard,
             showFullSplitBtns: false,
-            addBlockType: '',
+            selectedSubTopic: {},
         }
     }
-    handleClickOnArrow(box) {
-        console.log(box.title)
+    handleClickOnSubTopicCard(subTopicCard) {
+        console.log("card", subTopicCard)
     }
     addBlock(type) {
         let addBlockType = type;
@@ -26,38 +26,56 @@ class Home extends Component {
         let blockObjOne = {
             id: uid,
             key: "topic" + uid,
-            blockType: addBlockType,
+            // blockType: addBlockType,
             title: "Topic Name",
             cardsData: [],
         }
         let blockObjTwo = {
             id: uuid + "sec",
             key: "topic" + uuid + "sec",
-            blockType: addBlockType,
+            // blockType: addBlockType,
             title: "Topic Name",
             cardsData: [],
         }
 
         if (addBlockType === "full") {
             siteCardData["full"].push(blockObjOne)
+            let addedBlock = siteCardData[addBlockType].filter(block => block.id === blockObjOne.id)[0]
+            this.props.addTopicToSideNav(addedBlock, addBlockType)
         }
         if (addBlockType === "split") {
             siteCardData["split"].push(blockObjOne, blockObjTwo)
+            let addedBlock = siteCardData[addBlockType].filter(block => block.id === blockObjOne.id)[0]
+            let addedBlockTwo = siteCardData[addBlockType].filter(block => block.id === blockObjTwo.id)[0]
+            this.props.addTopicToSideNav(addedBlock, addBlockType, addedBlockTwo)
         }
-        let addedBlock = siteCardData[addBlockType].filter(block => block.id === blockObjOne.id)[0]
-        this.props.addTopicToSideNav(addedBlock)
+        // this.props.addTopicToSideNav(addBlockType)
 
         this.setState({
-            addBlockType: addBlockType,
             siteCardData: siteCardData,
             showFullSplitBtns: false
         })
     }
+    addSingleSplitBlock(type) {
+        let siteCardData = this.state.siteCardData;
+        let uid = new Date().getTime();
+        let blockObj = {
+            id: uid,
+            key: "topic" + uid,
+            // blockType: type,
+            title: "Topic Name",
+            cardsData: [],
+        }
+        siteCardData[type].push(blockObj)
+        this.props.addTopicToSideNav(blockObj, type)
+        this.setState({ siteCardData: siteCardData })
+    }
     addCardsInBlock(block) {
         let siteCardData = this.state.siteCardData
         let uid = new Date().getTime();
-        // console.log("block", block)
-        let selectedBlock = siteCardData[block.blockType].filter(blockObj => blockObj.id === block.id)[0]
+        let fullSplitArr = siteCardData.full.concat(siteCardData.split)
+        // let selectedBlock = siteCardData[block.blockType].filter(blockObj => blockObj.id === block.id)[0]
+        let selectedBlock = fullSplitArr.filter(blockObj => blockObj.id === block.id)[0]
         let cardObj = {
             id: uid,
             key: "subtopic" + uid,
@@ -65,6 +83,8 @@ class Home extends Component {
             description: "Sub topic description here",
         }
         selectedBlock.cardsData.push(cardObj)
+        let addedSubTopics = selectedBlock.cardsData.filter(subTopic => subTopic.id === cardObj.id)[0]
+        this.props.addSubTopicToSideNav(addedSubTopics)
         this.setState({
             siteCardData: siteCardData
         })
@@ -72,7 +92,6 @@ class Home extends Component {
 
     render() {
         let { siteCardData, showFullSplitBtns } = this.state;
-        console.log("siteCardData", siteCardData)
         return (
             <div className="cthree-component">
                 <div className="p-1 box-heading">
@@ -112,7 +131,7 @@ class Home extends Component {
                                     <Row xs="1" md="6" className="m-0 mt-2">
                                         {block.cardsData?.map((card, cardIdx) =>
                                             <Col key={cardIdx} className="p-2">
-                                                <Card className="card-container-in-block mr-1" style={{ backgroundImage: `url(${coverImg})` }} onClick={this.handleClickOnArrow.bind(this, card)}>
+                                                <Card className="card-container-in-block mr-1" style={{ backgroundImage: `url(${coverImg})` }} onClick={this.handleClickOnSubTopicCard.bind(this, card)}>
                                                     <Card.Body className="pb-2 pr-2 card-body-in-block" >
                                                         <h6><i className="fa fa-compass"></i> {card.title}</h6>
                                                         <small>{card.description}</small>
@@ -132,7 +151,7 @@ class Home extends Component {
                             </Col>
                         )}
                     </Row>
-                    <Row xs="1" md="2" className="m-0 mt-3 ">
+                    <Row className="m-0 mt-3 ">
                         {siteCardData.split?.map((block, blockIdx) =>
                             <Col key={blockIdx} className="p-1 mb-2">
                                 <div className="block-container p-3">
@@ -141,7 +160,7 @@ class Home extends Component {
                                             <span className="font-weight-bold">{block.title}</span>
                                         </Col>
                                         <Col className="p-0 text-right">
-                                            <div className="float-right add-icon-label" onClick={this.addCardsInBlock.bind(this, block)}>
+                                            <div className="add-icon-label" onClick={this.addCardsInBlock.bind(this, block)}>
                                                 <i className="fa fa-plus" /> <span>Card</span>
                                             </div>
                                         </Col>
@@ -149,7 +168,7 @@ class Home extends Component {
                                     <Row xs="1" md="3" className="m-0 mt-2">
                                         {block.cardsData.map((card, cardIdx) =>
                                             <Col key={cardIdx} className="p-2">
-                                                <Card className="card-container-in-block mr-1" style={{ backgroundImage: `url(${coverImg})` }} onClick={this.handleClickOnArrow.bind(this, card)}>
+                                                <Card className="card-container-in-block mr-1" style={{ backgroundImage: `url(${coverImg})` }} onClick={this.handleClickOnSubTopicCard.bind(this, card)}>
                                                     <Card.Body className="pb-2 pr-2 card-body-in-block" >
                                                         <h6><i className="fa fa-compass"></i> {card.title}</h6>
                                                         <small>{card.description}</small>
@@ -166,8 +185,18 @@ class Home extends Component {
                                         )}
                                     </Row>
                                 </div>
+                                {/* {siteCardData.split.length - 1 === blockIdx &&
+                                    <span className="pt-4 add-icon-label">
+                                        <i className="fa fa-plus" onClick={this.addSingleSplitBlock.bind(this, "split")} />
+                                    </span>
+                                } */}
                             </Col>
                         )}
+                        {siteCardData.split.length > 0 &&
+                            <div className="pt-4 add-icon-label">
+                                <i className="fa fa-plus" onClick={this.addSingleSplitBlock.bind(this, "split")} />
+                            </div>
+                        }
                     </Row>
                 </div>
             </div>
