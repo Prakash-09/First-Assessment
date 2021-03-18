@@ -29,16 +29,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-/* .list-items:hover{
-    background-color: #1A73E8;
-    color: white;
-    box-shadow: 0 10px 6px -6px #777;
-} */
 a{
     color:black;
 }
 a:hover{
-    /* background-color: #1A73E8; */
     color: #1A73E8;
     text-decoration: none;
 }

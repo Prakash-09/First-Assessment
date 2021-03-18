@@ -6,7 +6,6 @@
     background-size: cover;
 }
 .site-card-container:hover{
-    /* border: none; */
     box-shadow: 0 2px 10px -1px rgba(147, 90, 252, 0.568);
 }
 .site-card-footer{

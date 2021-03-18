@@ -14,7 +14,6 @@
     height: 100vh;
     position: absolute;
     overflow: auto;
-    /* position: fixed; */
 }
  .components-content{
     height: 100vh;
@@ -27,46 +26,6 @@
     width: 13%;
     transition: 0.3s ;
 }
-/*
-.card-container{
-    background-color: rgb(170, 245, 255);
-    transition: 2s;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 200px;
+.plus-icon{
     cursor: pointer;
-    overflow: hidden;
 }
-.card-footer{
-    background-color: transparent !important;
-    border: none !important;
-}
-.card-container:before {
-    content: "__";
-    font-weight: 900;
-    color: black;
-    position: absolute;
-    opacity: 0;  
-    bottom: 12px;
-    right: 20px;
-    transition: 1s;
-}
-.card-container:hover:before {
-    opacity: 1;
-    right: 6px;
-}
-.card-container:after {
-    content: "__";
-    font-weight: 900;
-    color: black;
-    position: absolute;
-    opacity: 1;  
-    bottom: 12px;
-    right: 12px;
-    transition: 0.4s;
-}
-.card-container:hover:after {
-    opacity: 0;
-    right: 6px;
-} */

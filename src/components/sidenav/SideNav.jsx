@@ -36,7 +36,6 @@ export default class SideNav extends React.Component {
     }
     render() {
         const { activeNavItem } = this.state;
-
         return (
             <div>
                 <label className="nav-header ml-2 py-2"><i className="fa fa-arrow-left back-to-site-page-icon" onClick={this.handleBackToSitePage.bind(this)} /></label>
@@ -59,9 +58,7 @@ export default class SideNav extends React.Component {
                             {nav.children &&
                                 nav.children.map((child, childIdx) =>
                                     <div key={childIdx}>
-                                        <Row onClick={this.handleNav.bind(this, child)}
-                                            className="mx-1 m-0 list-items"
-                                        >
+                                        <Row className="mx-1 m-0 list-items">
                                             <Col xs="3" className="icon-col p-0 m-0 pl-1"><i className={child.icon} /></Col>
                                             {this.props.hoverOnSideNav &&
                                                 <Col xs="9" className="text-left label-col p-0 m-0">{child.label}</Col>
@@ -70,14 +67,16 @@ export default class SideNav extends React.Component {
                                         {child.children &&
                                             child.children.map((subChild, subChildIdx) =>
                                                 <div key={subChildIdx}>
-                                                    <Row onClick={this.handleNav.bind(this, subChild)}
-                                                        className="mx-1 m-0 list-items"
-                                                    >
-                                                        <Col xs="3" className="icon-col p-0 m-0 pl-1"><i className={subChild.icon} /></Col>
-                                                        {this.props.hoverOnSideNav &&
-                                                            <Col xs="9" className="text-left label-col p-0 m-0">{subChild.label}</Col>
-                                                        }
-                                                    </Row>
+                                                    <Link to={subChild.to}>
+                                                        <Row onClick={this.handleNav.bind(this, subChild)}
+                                                            className={`${activeNavItem.toLowerCase() === subChild.id.replace(/ /g, "").toLowerCase() ? 'mx-1 activeNavItem' : 'mx-1 list-items'}`}
+                                                        >
+                                                            <Col xs="3" className="icon-col p-0 m-0 pl-1 text-center"><i className={subChild.icon} /></Col>
+                                                            {this.props.hoverOnSideNav &&
+                                                                <Col xs="9" className="text-left label-col p-0 m-0">{subChild.label}</Col>
+                                                            }
+                                                        </Row>
+                                                    </Link>
                                                 </div>
                                             )
                                         }

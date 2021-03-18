@@ -1,0 +1,27 @@
+.basic-card{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    cursor: pointer;
+    overflow: hidden;
+}
+.basic-img-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.custom-card{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    cursor: pointer;
+    overflow: auto;
+}
+.img-text-video-container{
+    height: 150px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    overflow: hidden;
+}
